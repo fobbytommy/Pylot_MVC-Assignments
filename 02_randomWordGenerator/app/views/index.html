@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Random Word Generator</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<p>Random Word (attempt #{{ session['attempt'] }})</p>
+			<h1>{{ session['random_word'] }}</h1>
+			<form action="/process" method="POST">
+				<input type="submit" value="Generate" class="button">
+			</form>
+			<form action="/reset" method="POST">
+				<input type="submit" value="Reset" class="button">
+			</form>
+		</div>
+	</body>
+</html>

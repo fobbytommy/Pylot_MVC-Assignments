@@ -1,0 +1,27 @@
+* {
+  font-family: monaco;
+}
+#wrapper {
+	width: 450px;
+	margin: 200px auto 0px auto;
+	text-align: center;
+}
+h1 {
+	border: 2px solid black;
+	margin: 0 auto;
+	display: inline-block;
+	width: 400px;
+	padding: 20px 0px;
+	margin-bottom: 20px;
+}
+p {
+	font-weight: 700;
+}
+form {
+	display: inline-block;
+}
+.button {
+	padding: 10px;
+	font-size: 1.2em;
+	margin-right: 10px;
+}
