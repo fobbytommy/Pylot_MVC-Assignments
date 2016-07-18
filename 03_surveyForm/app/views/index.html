@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Survey Form Assignment</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul>
+				{% for message in messages %}
+				<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+		<form action="/surveys/process" method="POST">
+			<p>
+				<label for="name">Your Name:</label>
+				<input type="text" name="name" id="name">
+			</p>
+			<p>
+				<label for="location">Dojo Location:</label>
+				<select name="location" id="location">
+					<option>Los Angeles, CA</option>
+					<option>Seattle, WA</option>
+					<option>Mountain View, CA</option>
+					<option>East Coast</option>
+					<option>Onliine</option>
+				</select>
+			</p>
+			<p>
+				<label for="language">Favoriate Language:</label>
+				<select name="language" id="language">
+					<option>HTML/CSS</option>
+					<option>JavaScript</option>
+					<option>PHP</option>
+					<option>Python</option>
+					<option>Ruby on Rails</option>
+					<option>Node</option>
+				</select>
+			</p>
+			<p><label for="comment">Comment (optional):</label></p>
+			<textarea name="comment" id="comment"></textarea>
+			<p><input type="submit" value="Submit"><p>
+		</form>
+	</div>
+</body>
+</html>
